@@ -29,7 +29,7 @@ public void OnPluginStart()
   CreateConVar("sm_tf_captoggle", PLUGIN_VERSION, PLUGIN_NAME);
   g_hArenaAutoDisable = CreateConVar("sm_cap_auto_arena", "0", "Sets whether or not Arena capture points are automatically disabled on round start");
   
-  RegAdminCmd("sm_cap", Command_ToggleObjectives, ADMFLAG_BAN, "Enable Objectives");
+  RegAdminCmd("sm_cap", Command_ToggleObjectives, ADMFLAG_GENERIC, "Enable Objectives");
   
   HookEvent("arena_round_start", Event_ArenaRoundStart, EventHookMode_PostNoCopy);
 }
